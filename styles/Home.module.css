@@ -1,0 +1,45 @@
+.main {
+	min-height: 100vh;
+	padding: 0 4rem;
+	text-align: center;
+}
+
+.nav {
+	border-bottom: 2px solid white;
+}
+
+.nav ul {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+}
+
+.nav ul li {
+	text-decoration: none;
+	display: inline;
+	padding-bottom: 16px;
+}
+
+.nav ul li a:hover {
+	color: aquamarine;
+}
+
+.main a {
+	color: aquamarine;
+	text-decoration: underline;
+}
+
+.main li {
+	text-decoration: none;
+	display: block;
+}
+
+.main code {
+	background-color: grey;
+	padding: 8px;
+	border-radius: 4px;
+	line-height: 2.1rem;
+}
+
+.main h2 {
+	text-decoration: underline;
+}
