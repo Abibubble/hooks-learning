@@ -25,15 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/use-id": [
+    "/use-transition": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/use-id.js"
-    ],
-    "/use-reducer": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/use-reducer.js"
+      "static/chunks/pages/use-transition.js"
     ]
   },
   "ampFirstPages": []

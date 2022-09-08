@@ -34,13 +34,13 @@ export default function Layout({ ...props }) {
 							<a href="/use-id">UseId</a>
 						</li>
 						<li>
-							<a href="/use-transition">useTransition</a>
+							<a href="/use-transition">UseTransition</a>
 						</li>
 						<li>
 							<a href="/use-debug-value">UseDebugValue</a>
 						</li>
 						<li>
-							<a href="/use-deferred-value">useDeferredValue</a>
+							<a href="/use-deferred-value">UseDeferredValue</a>
 						</li>
 						<li>
 							<a href="/use-memo">UseMemo</a>
