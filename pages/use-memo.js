@@ -36,12 +36,22 @@ export default function Memo() {
 		<Layout>
 			<h1>useMemo</h1>
 			<p>
-				I don&apos;t understand how this works. Looks like it hides some data to
-				display later? Maybe similar to an accordion, but more flexible?
+				<code>useMemo</code> returns a memoized value.
 			</p>
 			<p>
-				useMemo should be used as a performance optimization, not relied on as a
-				semantic guarantee.
+				Think of memoization as caching a value so that it does not need to be
+				recalculated.
+			</p>
+			<p>
+				<code>useMemo</code> only runs when one of its dependencies update.
+			</p>
+			<p>
+				<code>useMemo</code> should be used as a performance optimization, not
+				relied on as a semantic guarantee.
+			</p>
+			<p>
+				It can be used to keep expensive, resource intensive functions from
+				needlessly running.
 			</p>
 			<p>
 				In the future, React may choose to forget some previously memoized
@@ -49,9 +59,14 @@ export default function Memo() {
 				offscreen components.
 			</p>
 			<p>
-				Write your code so that it still works without useMemo — and then add it
-				to optimize performance.
+				Write your code so that it still works without <code>useMemo</code> —
+				and then add it to optimize performance.
 			</p>
+			<p>
+				I definitely need to look more into this, I'm still not certain about
+				syntax
+			</p>
+			<h2>Example</h2>
 			<div className="App">
 				<div> {getLongestName} </div>
 

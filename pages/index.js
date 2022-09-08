@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 export default function Home() {
 	return (
 		<Layout>
+			<h1>React Hooks</h1>
 			<p>
 				A Hook is a special function that lets you “hook into” React features.
 			</p>

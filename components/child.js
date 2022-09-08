@@ -5,7 +5,7 @@ function Child({ returnComment }) {
 		console.log('FUNCTION WAS CALLED');
 	}, [returnComment]);
 
-	return <div>{returnComment('Eve')}</div>;
+	return <div>{returnComment('Everyone')}</div>;
 }
 
 export default Child;

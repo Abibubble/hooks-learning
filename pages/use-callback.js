@@ -3,7 +3,6 @@ import Layout from '../components/layout';
 import Child from '../components/child';
 
 export default function CallBackTutorial() {
-	const [toggle, setToggle] = useState(false);
 	const [data, setData] = useState('Hello ');
 
 	const returnComment = useCallback(
@@ -16,19 +15,25 @@ export default function CallBackTutorial() {
 	return (
 		<Layout>
 			<h1>useCallback</h1>
-			<div className="App">
-				<Child returnComment={returnComment} />
-
-				<button
-					onClick={() => {
-						setToggle(!toggle);
-					}}
-				>
-					{' '}
-					Toggle
-				</button>
-				{toggle && <h1>Toggled</h1>}
-			</div>
+			<p>
+				<code>useCallback</code> returns a memoized callback function.
+			</p>
+			<p>
+				This allows us to isolate resource intensive functions so that they will
+				not automatically run on every render.
+			</p>
+			<p>
+				<code>useCallback</code> and <code>useMemo</code> are similar.
+			</p>
+			<p>
+				The main difference is that <code>useMemo</code> returns a memoized
+				value and <code>useCallback</code> returns a memoized function.
+			</p>
+			<p>
+				It prevents a component from re-rendering unless its props have changed.
+			</p>
+			<h2>Example</h2>
+			<Child returnComment={returnComment} />
 		</Layout>
 	);
 }
