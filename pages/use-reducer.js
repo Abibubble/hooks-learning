@@ -37,14 +37,32 @@ export default function Reducer() {
 			<p>There are two different ways to initialize useReducer state.</p>
 			<p>The simplest way is to pass the initial state as a second argument:</p>
 			<p>
-				{
-					'const [state, dispatch] = useReducer(reducer, {count: initialCount});'
-				}
+				<code>
+					{
+						'const [state, dispatch] = useReducer(reducer, {count: initialCount});'
+					}
+				</code>
 			</p>
 			<p>
 				If you return the same value from a Reducer Hook as the current state,
 				React will bail out without rendering the children or firing effects.
 			</p>
+			<p>Here&apos;s an example of this code:</p>
+			<p>
+				<code>{'<p>Count: {state.count}</p>'}</code>
+			</p>
+			<p>
+				<code>
+					{'<button onClick={() => dispatch({ type: "decrement" })}>-</button>'}
+				</code>
+			</p>
+			<p>
+				<code>
+					{'<button onClick={() => dispatch({ type: "increment" })}>+</button>'}
+				</code>
+			</p>
+
+			<h2>Example</h2>
 			<p>Count: {state.count}</p>
 			<button onClick={() => dispatch({ type: 'decrement' })}>-</button>
 			<button onClick={() => dispatch({ type: 'increment' })}>+</button>
