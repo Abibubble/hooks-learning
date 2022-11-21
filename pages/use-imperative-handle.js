@@ -1,9 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Layout from '../components/layout';
-import Button from '../components/button';
+import CustomInput from '../components/custom-input';
 
 export default function ImperativeHandle() {
-	const buttonRef = useRef(null);
+	const [value, setValue] = useState('red');
+	const inputRef = useRef();
 
 	return (
 		<Layout>
@@ -12,14 +13,13 @@ export default function ImperativeHandle() {
 				Nope, this is still beyond me. Absolutely no idea what this is talking
 				about.
 			</p>
-			<button
-				onClick={() => {
-					buttonRef.current.alterToggle();
-				}}
-			>
-				Button From Parent
-			</button>
-			<Button ref={buttonRef} />
+			<CustomInput
+				ref={inputRef}
+				value={value}
+				onChange={(e) => setValue(e.target.value)}
+			/>
+			<br />
+			<button onClick={() => inputRef.current.focus()}>Focus</button>
 		</Layout>
 	);
 }

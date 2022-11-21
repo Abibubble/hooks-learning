@@ -1,7 +1,6 @@
-/* eslint-disable react/display-name */
 import React, { forwardRef, useImperativeHandle, useState } from 'react';
 
-const Button = forwardRef((props, ref) => {
+const CustomInput = forwardRef((props, ref) => {
 	const [toggle, setToggle] = useState(false);
 
 	useImperativeHandle(ref, () => ({
